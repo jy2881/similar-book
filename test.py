@@ -41,7 +41,7 @@ def makeDict(url,url_new):
 def judgement(new_dict):
     mean = sum(new_dict.values())/len(new_dict.values())
     list_value = list(new_dict.values())
-    var = sum([(a-mean)*(a-mean) for a in list_value])/len(list_value)
+    var = sum([(a-mean)*(a-mean) for a in list_value])/len(list_value)+0.1
     length = len(new_dict.values())
     if new_dict[book_name] == 5:
         return 100*var*(5-mean)
